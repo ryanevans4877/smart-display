@@ -25,10 +25,21 @@ slides.forEach((slider, index) =>{
 
 })
 
-
 function mouseStart(){
     return function(event){
         console.log("Touched");
     }
+}
+
+function changeWeb(number){
+  if(number == 1){
+    window.location.href = "calendar.html";
+  }else if(number == 2){
+    window.location.href = "weather.html";
+  }else if(number == 3){
+    window.location.href = "music.html";
+  }else if(number == 4){
+    window.location.href = "draw.html";
+  }
 }
 
