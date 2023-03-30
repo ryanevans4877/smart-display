@@ -1,0 +1,145 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size:cover ;
+  }
+  
+  .clock-wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+  }
+  
+  .clock {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17rem; /* increase the font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    user-select: none;
+    color: white;
+  }
+  
+  .hours,
+  .minutes,
+  .seconds {
+    margin: 0 0.5rem; /* add some spacing between the elements */
+  }
+  
+  
+  .separator {
+    margin: 0 0.05em;
+    font-size: 14rem;
+  }
+  
+#date{
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  top: 64%;
+  color: white;
+  font-size: 1.7rem;
+}
+
+#greeting{
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  color: white;
+  top: 16%;
+  font-size: 3rem;
+}
+
+  .slider {
+    width: 60%;
+    height: 40px;
+    position: relative;
+
+  }
+  
+  .slider-rail {
+    width: 60%;
+    height: 2px;
+    border-radius: 12px;
+    position: absolute;
+    left: 20%;
+    bottom: 150px;
+  }
+  
+  .slider-thumb {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(Res/white-arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    bottom: 100px;
+}
+
+.slider-thumb:active{
+  width: 110px;
+    height: 110px;
+}
+
+.fade-to-black {
+  background-color: black;
+  transition: background-color 0.1s ease-in-out;
+}
+  
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.fade-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 1000; /* set the z-index to be greater than that of the slider */
+}
+
+.fade-in {
+  animation-name: fadeInOpacity;
+  animation-duration: 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 1000;
+  animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  
+
+  
+  
+  

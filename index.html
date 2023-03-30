@@ -1,77 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Alarm Clock</title>
-<script src="index.js"></script>
-<link href="index.css" rel="stylesheet"></head>
-<body onload="startTime(), slowVideo()">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  </head>
+  <body onload="updateClock()">
     <video autoplay muted loop id="myVideo" width="1920" height="1080">
-        <source src="Resources/alarmVideo.mp4" type="video/mp4">
-      </video>
-    <div style="text-align: center; position: relative;">
-        <p id="time" style="font-family: digital-clock-font; font-size: 300px; color: white;"></p>
-        <input type="range"  min="0" max="100" value="0" class="pullee" ID="sliderUnlock"/>
-
-<script>
-    var inputRange = document.getElementsByClassName('pullee')[0],
-    maxValue = 100, // the higher the smoother when dragging
-    speed = 12, // thanks to @pixelass for this
-    currValue, rafID;
-
-// listen for unlock
-function unlockStartHandler() {
-    // clear raf if trying again
-    window.cancelAnimationFrame(rafID);
-    
-    // set to desired value
-    currValue = +this.value;
-}
-
-function unlockEndHandler() {
-    
-    // store current value
-    currValue = +this.value;
-    
-    // determine if we have reached success or not
-    if(currValue >= maxValue) {
-        successHandler();
-    }
-    else {
-        rafID = window.requestAnimationFrame(animateHandler);
-    }
-}
-
-// handle range animation
-function animateHandler() {
-    
-    // update input range
-    inputRange.value = currValue;
-    
-    // determine if we need to continue
-    if(currValue > -1) {
-    	window.requestAnimationFrame(animateHandler);   
-    }
-    
-    // decrement value
-    currValue = currValue - speed;
-}
-
-// handle successful unlock
-function successHandler() {
-
-    //add transition
-
-
-    //change file to main
-    window.location.href = "main.html";
-    inputRange.value = 0;
-};
-
-// bind events
-inputRange.addEventListener('mousedown', unlockStartHandler, false);
-inputRange.addEventListener('mousestart', unlockStartHandler, false);
-inputRange.addEventListener('mouseup', unlockEndHandler, false);
-inputRange.addEventListener('touchend', unlockEndHandler, false);
-</script>
-</body>
+      <source src="Res/alarmVideo.mp4" type="video/mp4">
+    </video>
+    <div id="fade" class=""></div>
+    <div class="clock-wrapper">
+          <div id="greeting"></div>
+        <div class="clock">
+          <span class="hours"></span>
+          <span class="separator">:</span>
+          <span class="minutes"></span>
+        </div>
+        <div id="date"></div>
+        <div class="slider">
+            <div class="slider-rail">
+              <div class="slider-thumb"></div>
+            </div>
+          </div>
+          
+      </div>
+	<script src="index.js"></script>
+  </body>
 </html>
