@@ -7,12 +7,48 @@ body{
     position: absolute;
     left: 43%;
     width: 200px;
-    height: 60px;
+    height: 45px;
     background-color: #242424;
     border-radius: 0.8rem;
 }
 
-#titleTime{
+#backButton{
+    position: absolute;
+    background-color: #242424;
+    width: 80px;
+    height: 80px;
+    border-bottom-right-radius: 0.8rem;
+}
+
+#buttonBack{
+    width: 70px;
+    height: 70px;
+    border: none;
+    background-color: #242424;
+    background-image: url(Res/back-button.png);
+}
+
+#optionsButton{
+    position: absolute;
+    background-color: #242424;
+    width: 80px;
+    height: 80px;
+    right: 0%;
+    border-bottom-left-radius: 0.8rem;
+}
+
+#buttonOptions{
+    width: 70px;
+    height: 70px;
+    border: none;
+    background-color: #242424;
+    background-image: url(Res/options-icon.png);
+    padding: 0%;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#titleTime{ 
     width: 100%;
     height: 18px;
     background-color: #242424;
@@ -31,7 +67,7 @@ body{
 }
 
 .button-container{
-    margin-top: 40px;
+    margin-top: 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -42,7 +78,7 @@ body{
   
 .button{
     width: 31%;
-    height: 400px;
+    height: 480px;
     font-size: 24px;
     text-align: center;
     margin: 15px;
@@ -59,6 +95,72 @@ body{
     background-color: darkgreen;
 }
 
+.clock-wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
 
+  }
+  
+.clocks {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17rem; /* increase the font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    user-select: none;
+    color: white;
+  }
+  
+.hours,
+.minutes,
+.seconds {
+    margin: 0 0.5rem; /* add some spacing between the elements */
+}
+  
+  
+.separator {
+    margin: 0 0.05em;
+    font-size: 14rem;
+}
+
+.separatorhome {
+    margin: 0px;
+}
+#date{
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  top: 64%;
+  color: white;
+  font-size: 1.7rem;
+}
+
+#greeting{
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  color: white;
+  top: 16%;
+  font-size: 3rem;
+}
+
+#uparrow{
+    position: absolute;
+    bottom: 15%;
+    user-select: none;
+
+}
+
+#timeExpand span{
+    font-size: 2.3rem; /* increase the font size */
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 6px;
+    color: white;
+    
+}
 
   

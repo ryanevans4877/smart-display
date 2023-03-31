@@ -6,7 +6,7 @@ html, body {
     background-size:cover ;
   }
   
-  .clock-wrapper {
+.clock-wrapper {
     position: relative;
     height: 100%;
     display: flex;
@@ -17,7 +17,7 @@ html, body {
 
   }
   
-  .clock {
+.clock {
     font-family: 'Open Sans', sans-serif;
     font-size: 17rem; /* increase the font size */
     display: flex;
@@ -28,17 +28,17 @@ html, body {
     color: white;
   }
   
-  .hours,
-  .minutes,
-  .seconds {
+.hours,
+.minutes,
+.seconds {
     margin: 0 0.5rem; /* add some spacing between the elements */
-  }
+}
   
   
-  .separator {
+.separator {
     margin: 0 0.05em;
     font-size: 14rem;
-  }
+}
   
 #date{
   font-family: 'Open Sans', sans-serif;
@@ -127,7 +127,19 @@ html, body {
   opacity: 0;
   z-index: 1000;
   animation-timing-function: ease-in;
-  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.animateup{
+  animation-name: slide-up;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.animatedown{
+  animation-name: slide-down;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeInOpacity {
@@ -136,6 +148,25 @@ html, body {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+
+  from {
+
+  }
+  to {
+      transform: translatey(-100%);
+  }
+}
+@keyframes slide-down {
+
+  from {
+    transform: translatey(-100%);
+  }
+  to {
+      transform: translatey(0%);
   }
 }
   

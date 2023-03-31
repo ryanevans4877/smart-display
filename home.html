@@ -1,41 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-    <link rel="stylesheet" href="home.css">
-  </head>
-  <body onload="updateClock()"> 
-    <div id="titleTime">
-        <div id="timeExpand">
-            <div class="clock">
-                <span class="hours"></span>
-                <span class="separator">:</span>
-                <span class="minutes"></span>
-                <span class="separator">:</span>
-                <span class="seconds"></span>
-              </div>
-        </div>
-    </div>
-    <!DOCTYPE html>
-<html>
-  <head>
-
-    <link rel="stylesheet" href="home.css">
-  </head>
-  <body>
-    <div class="button-container">
-      <a href="music.html" class="button" style="background-image: url(Res/recordicon.png);">Music</a>
-      <a href="weather.html" class="button" style="background-image: url(Res/weathericon.png);">Weather</a>
-      <a href="alarm.html" class="button">Alarm</a>
-      <a href="drawing.html" class="button" style="background-image: url(Res/drawicon.png);">Drawing</a>
-      <a href="todo.html" class="button">To-Do List</a>
-      <a href="calendar.html" class="button" style="background-image: url(Res/calendaricon.png);">Calendar</a>
-    </div>
-  </body>
-</html>
-	<script src="home.js"></script>
-  </body>
-</html>
+<div class="button-container">
+    <a class="button" style="background-image: url(Res/recordicon.png);"></a>
+    <a class="button" style="background-image: url(Res/weathericon.png);"></a>
+    <a class="button">Alarm</a>
+    <a class="button" style="background-image: url(Res/drawicon.png);"></a>
+    <a class="button">To-Do List</a>
+    <a class="button" style="background-image: url(Res/calendaricon.png);" onclick="OpenCalendar()"></a>
+</div>
